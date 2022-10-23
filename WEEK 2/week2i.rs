@@ -2,7 +2,7 @@
 //let variable_name:dataType = value; type specified
 
 fn main(){
-	let fees = 25000;
-	let salary:f64 = 35000.00;
+	let fees = 25_000;
+	let salary:f64 = 35_000.00;
 	println!("The fees is {} and his salary is {}",fees,salary );
 }
