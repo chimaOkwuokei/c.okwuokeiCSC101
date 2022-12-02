@@ -1,0 +1,1 @@
+C:\Users\Samsung\Desktop\CLASS\ NOTES\200L\GIT\c.okwuokeiCSC101\WEEK\ 6\project2\target\debug\project2.exe: C:\Users\Samsung\Desktop\CLASS\ NOTES\200L\GIT\c.okwuokeiCSC101\WEEK\ 6\project2\src\main.rs

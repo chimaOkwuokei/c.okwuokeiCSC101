@@ -2,6 +2,7 @@ use std::io;
 fn main() {
     let mut city : Vec<String> = Vec::new();
     println!("The City vector has element {}", city.len() );
+    
     let mut input1 = String::new();
     println!("How many cities do you want to enter?");
     io::stdin().read_line(&mut input1).expect("Failed to read input");

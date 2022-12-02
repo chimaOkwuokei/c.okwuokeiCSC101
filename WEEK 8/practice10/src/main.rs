@@ -13,5 +13,5 @@ fn main() {
    
     let slice4 = &numbers[..];
     println!("index 0 to index 5 sliced {:?}", slice4 );
-
+//always exclusive of the last index
 }
