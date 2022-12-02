@@ -10,10 +10,7 @@ fn main() {
         if e == "Experienced"{
             println!("Welcome")
         }
-        else{
-            println!("Go elsewhere" );
-        }
-
+        
     //input age
     println!("Enter your age.");
     let mut age = String::new();
