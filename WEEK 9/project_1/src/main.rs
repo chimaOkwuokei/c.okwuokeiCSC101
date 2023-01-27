@@ -2,7 +2,7 @@ use std::io::Write;
 fn main() {
     let a = ["LAGER: ", "STOUT: ", "NON-ALCOHOLIC "];
     let b = ["33 Export "," Legend ", " Maltina "];
-    let c =   [" Desperados "," Turbo King ", " Amstel Malta "];
+    let c = [" Desperados "," Turbo King ", " Amstel Malta "];
     let d = [" Goldberg ", " Williams ", " Malta Gold "];
     let e = [" Gulder ", " ", " Fayrouz "];
     let f = [" Heineken ", " ", " "];
