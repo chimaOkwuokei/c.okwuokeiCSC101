@@ -21,6 +21,37 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
+-- Name: customer; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.customer (
+    cid integer NOT NULL,
+    cname text NOT NULL,
+    cage integer NOT NULL,
+    cemail character(50),
+    cmobile text,
+    staff_id integer,
+    data_id integer
+);
+
+
+ALTER TABLE public.customer OWNER TO postgres;
+
+--
+-- Name: dataplan; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.dataplan (
+    dataid integer NOT NULL,
+    datasize character(10) NOT NULL,
+    dataduration integer,
+    dataprice integer
+);
+
+
+ALTER TABLE public.dataplan OWNER TO postgres;
+
+--
 -- Name: department; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -66,6 +97,44 @@ CREATE TABLE public.staff (
 ALTER TABLE public.staff OWNER TO postgres;
 
 --
+-- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.customer (cid, cname, cage, cemail, cmobile, staff_id, data_id) FROM stdin;
+110	Musta Karim	35	m_karim@gmail.com                                 	08055089112	102	5
+111	Lilian Jaiya	43	l_jaiye@gmail.com                                 	08055185341	100	3
+112	Arthur Musa	50	a_musa@gmail.com                                  	07055282813	107	10
+113	Philip Akonjo	41	p_akonjo@gmail.com                                	09052356772	100	2
+114	Marviene Mapa	33	m_mapa@gmail.com                                  	08053333551	120	5
+115	Oghenero Agor	50	o_agor@gmail.com                                  	07055566774	117	11
+116	Adams Bree	33	a_bree@gmail.com                                  	08056765424	102	1
+117	Okafor Mathias	45	o_mathias@gmail.com                               	08056763367	120	10
+118	Samson Adeleke	65	s_adeleke@gmail.com                               	07056774423	117	11
+119	Lawal Tamire	35	l_tamire@gmail.com                                	09052111101	107	5
+120	James Job	44	j_job@gmail.com                                   	08059693919	100	8
+121	Matthew Jakande	21	m_jakande@gmail.com                               	07051232144	120	2
+122	Jimila Adegboye	20	j_adegboye@gmail.com                              	08054921923	107	5
+\.
+
+
+--
+-- Data for Name: dataplan; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.dataplan (dataid, datasize, dataduration, dataprice) FROM stdin;
+1	350MB     	2	200
+2	1.8GB     	14	500
+3	3.9GB     	30	1000
+4	7.5GB     	30	1500
+5	9.2GB     	30	2000
+6	10.8GB    	30	2500
+7	14GB      	30	3000
+8	18GB      	30	4000
+9	24GB      	30	5000
+\.
+
+
+--
 -- Data for Name: department; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -109,6 +178,22 @@ COPY public.staff (staff_id, staff_name, dno, age, mobile, staff_sal) FROM stdin
 104	Kuti Lawal	1	35	9145689842	750000
 120	Adeleke Jane	4	38	7061045862	200000
 \.
+
+
+--
+-- Name: customer customer_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.customer
+    ADD CONSTRAINT customer_pkey PRIMARY KEY (cid);
+
+
+--
+-- Name: dataplan dataplan_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dataplan
+    ADD CONSTRAINT dataplan_pkey PRIMARY KEY (dataid);
 
 
 --
